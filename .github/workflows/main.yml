@@ -40,6 +40,7 @@ jobs:
         fail_on: "HIGH"
         verbose: true
         output: ./output
+        timeout: 900
     - name: Reclaim output directory  
       if: always()  
       run: sudo chown -R 1001:1001 ${{ github.workspace }}/output
